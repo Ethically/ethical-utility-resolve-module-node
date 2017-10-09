@@ -1,0 +1,32 @@
+{
+  "name": "ethical-utility-resolve-module-node",
+  "version": "0.0.1",
+  "description": "Module resolution utility used by Node for the Ethical framework.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "nutra --config ./nutra.config.js && npm run prepublish",
+    "test-debugger": "DEBUG=1 node --inspect-brk ./node_modules/.bin/nutra --config ./nutra.config.js",
+    "build": "babel src --out-dir dist --source-maps",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethically/ethical-utility-resolve-module-node.git"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "ethical-noop-module-browser": "0.0.1",
+    "ethical-noop-module-files": "0.0.1",
+    "ethical-noop-module-node": "0.0.1",
+    "nutra": "0.0.14",
+    "nutra-jasmine-coverage-babel-preset": "0.0.10"
+  },
+  "dependencies": {
+    "ethical-utility-path": "0.0.0",
+    "ethical-utility-resolve-module": "0.0.0"
+  }
+}
